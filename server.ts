@@ -41,7 +41,7 @@ app.post('/bet', isAuthenticated, betController);
 
 
 mongoose
-	.connect('mongodb://localhost/gambling-game-test')
+	.connect('mongodb+srv://spidey:satyam52@magadh-cluster.fozaf88.mongodb.net/games?retryWrites=true&w=majority')
 	.then(async conn => {
 		console.log('database connected')
 		await seedCard()
