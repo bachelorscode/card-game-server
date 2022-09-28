@@ -1,0 +1,155 @@
+[
+    {
+        "label": "divisor",
+        "kind": 2,
+        "importPath": "divisor",
+        "description": "divisor",
+        "peekOfCode": "def divisor(n):\n    divisors = []\n    for num in range(1, n):\n        if(n % num == 0 ):\n            divisors.append(num)\n    return divisors\ndef isAmicableNumber(a, b):\n    for i in range(a, b+1):\n        divisorSum = sum(divisor((i)))\n        if(sum(divisor(divisorSum)) == i):",
+        "detail": "divisor",
+        "documentation": {}
+    },
+    {
+        "label": "isAmicableNumber",
+        "kind": 2,
+        "importPath": "divisor",
+        "description": "divisor",
+        "peekOfCode": "def isAmicableNumber(a, b):\n    for i in range(a, b+1):\n        divisorSum = sum(divisor((i)))\n        if(sum(divisor(divisorSum)) == i):\n            print(i, \" is amicable number and it's divisor sum is \", divisorSum)\nisAmicableNumber(1, 1000)",
+        "detail": "divisor",
+        "documentation": {}
+    },
+    {
+        "label": "getFact",
+        "kind": 2,
+        "importPath": "fact",
+        "description": "fact",
+        "peekOfCode": "def getFact(n):\n    if(n == 0):\n        return 1\n    elif (n < 0):\n        return \"Negative value\"\n    fact = 1\n    while n > 0:\n        fact = fact * n\n        n-=1\n    return fact",
+        "detail": "fact",
+        "documentation": {}
+    },
+    {
+        "label": "num",
+        "kind": 5,
+        "importPath": "fact",
+        "description": "fact",
+        "peekOfCode": "num = int(input('> Enter number: '))\nprint(getFact(num))",
+        "detail": "fact",
+        "documentation": {}
+    },
+    {
+        "label": "fetchUser",
+        "kind": 2,
+        "importPath": "nprncr",
+        "description": "nprncr",
+        "peekOfCode": "def fetchUser():\n    id = int(input(\"> please enter your id: \"))\n    flag = False\n    user = {}\n    for e in disc:\n        if(e[\"id\"] == id):\n            flag = True\n            user = e\n            break\n    if(flag):",
+        "detail": "nprncr",
+        "documentation": {}
+    },
+    {
+        "label": "insertUser",
+        "kind": 2,
+        "importPath": "nprncr",
+        "description": "nprncr",
+        "peekOfCode": "def insertUser():\n    id = int(input(\"> Please enter id\"))\n    name = input(\"> Please enter name\")\n    age = input(\"> please enter age\")\n    disc.append({\n        \"id\": id,\n        \"name\": name,\n        \"age\": age\n    })\n    print(\"User create with details: \")",
+        "detail": "nprncr",
+        "documentation": {}
+    },
+    {
+        "label": "insertAsObj",
+        "kind": 2,
+        "importPath": "nprncr",
+        "description": "nprncr",
+        "peekOfCode": "def insertAsObj():\n    obj = input(\"> enter obj of student\")\n    disc.append(obj)\n    print(\"User create \")\n    print(obj)\ndef options():\n    print(\"> 1 for search user\")\n    print(\"> 2 for insert user\")\n    print(\"> 3 for insert obj of user\")\n    print(\"> Any key for exit\")",
+        "detail": "nprncr",
+        "documentation": {}
+    },
+    {
+        "label": "options",
+        "kind": 2,
+        "importPath": "nprncr",
+        "description": "nprncr",
+        "peekOfCode": "def options():\n    print(\"> 1 for search user\")\n    print(\"> 2 for insert user\")\n    print(\"> 3 for insert obj of user\")\n    print(\"> Any key for exit\")\ndef main():\n    flag = True\n    while flag:\n        options()\n        opt = int(input(\"> Please enter your choice: \"))",
+        "detail": "nprncr",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "nprncr",
+        "description": "nprncr",
+        "peekOfCode": "def main():\n    flag = True\n    while flag:\n        options()\n        opt = int(input(\"> Please enter your choice: \"))\n        if opt == 1:\n            fetchUser()\n        elif opt == 2:\n            insertUser()\n        elif opt == 3:",
+        "detail": "nprncr",
+        "documentation": {}
+    },
+    {
+        "label": "disc",
+        "kind": 5,
+        "importPath": "nprncr",
+        "description": "nprncr",
+        "peekOfCode": "disc = [\n    {\n        \"id\": 1,\n        \"name\": \"Satyam Kumar\",\n        \"age\": \"21\",\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Gaurav Singh\",\n        \"age\": \"20\",",
+        "detail": "nprncr",
+        "documentation": {}
+    },
+    {
+        "label": "tup1",
+        "kind": 5,
+        "importPath": "pyclass",
+        "description": "pyclass",
+        "peekOfCode": "tup1 = (12, 14, 5)\n# addition of tuple\ntup1 = tup1 + (190, 34, 53)\n# replacing tuple\ntup1 = (90, 97, 34)\n# slice of tuple\nprint(tup1[0:2])\nprint(tup1)\n# deleting tuple\ndel tup1",
+        "detail": "pyclass",
+        "documentation": {}
+    },
+    {
+        "label": "tup1",
+        "kind": 5,
+        "importPath": "pyclass",
+        "description": "pyclass",
+        "peekOfCode": "tup1 = tup1 + (190, 34, 53)\n# replacing tuple\ntup1 = (90, 97, 34)\n# slice of tuple\nprint(tup1[0:2])\nprint(tup1)\n# deleting tuple\ndel tup1\n# now it throw error\nprint(tup1)",
+        "detail": "pyclass",
+        "documentation": {}
+    },
+    {
+        "label": "tup1",
+        "kind": 5,
+        "importPath": "pyclass",
+        "description": "pyclass",
+        "peekOfCode": "tup1 = (90, 97, 34)\n# slice of tuple\nprint(tup1[0:2])\nprint(tup1)\n# deleting tuple\ndel tup1\n# now it throw error\nprint(tup1)",
+        "detail": "pyclass",
+        "documentation": {}
+    },
+    {
+        "label": "checkPrime",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def checkPrime(n):\n    for i in range(2, n):\n        if n % i == 0:\n            return False\n    return True\ndef create_twins(lower, upper):\n    for i in range(lower, upper):\n        j = i+2\n        if(checkPrime(i) and checkPrime(j)):\n            print(f\"twin: {i}, {j}\")",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "create_twins",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def create_twins(lower, upper):\n    for i in range(lower, upper):\n        j = i+2\n        if(checkPrime(i) and checkPrime(j)):\n            print(f\"twin: {i}, {j}\")\nlower = int(input('> Please lower limit: '))\nupper = int(input('> please enter upper limit: '))\ncreate_twins(lower, upper)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "lower",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "lower = int(input('> Please lower limit: '))\nupper = int(input('> please enter upper limit: '))\ncreate_twins(lower, upper)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "upper",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "upper = int(input('> please enter upper limit: '))\ncreate_twins(lower, upper)",
+        "detail": "test",
+        "documentation": {}
+    }
+]

@@ -5,7 +5,6 @@ import { calculateWinner, getRandomFromArray, seed_game, sleep } from "./utils";
 
 export const Script = (io: Server) => {
 	io.on('connection', async (socket) => {
-		console.log('user connected ');
 		const currentGame = await LuckySevenModel.findOne({}).sort({ createdAt: -1 });
 		if (currentGame) {
 			if (currentGame.status == gameStatus.BIDDING) {
@@ -34,13 +33,11 @@ export const Script = (io: Server) => {
 		if (lastGame.status === gameStatus.RUNNING) return
 
 		if (lastGame.status === gameStatus.COMPLETED) {
-			console.log('game is already completed')
 			await seed_game(io)
 			GAME_PAUSED = false
 			return
 		}
 
-		console.log(lastGame)
 
 		setTimeout(async () => {
 			io.emit('SUSPEND_GAME', 'From script');
